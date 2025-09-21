@@ -22,7 +22,6 @@ class CrudController extends Controller
             return response($this->service->getAll(), 200);
 
     }
-
     public function store(Request $request): JsonResponse
     {
         $this->service->store($request->all());
