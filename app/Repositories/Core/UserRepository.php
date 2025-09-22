@@ -40,14 +40,14 @@ class UserRepository extends BaseRepository
         return $this->entity->orderBy('users.name')->withTrashed()->with('profile')->paginate($totalPage);
     }
 
-    // public function getUserAbilities(int $id)
-    // {
-    //     return ProfileAbility::select('abilities.slug as abilities')
-    //         ->join('abilities', 'abilities.id', '=', 'profile_abilities.ability_id')
-    //         ->where('profile_abilities.profile_id', '=', $id)
-    //         ->pluck('abilities')
-    //         ->toArray();
-    // }
+    public function getUserAbilities(int $id)
+    {
+        return ProfileAbility::select('abilities.slug as abilities')
+            ->join('abilities', 'abilities.id', '=', 'profile_abilities.ability_id')
+            ->where('profile_abilities.profile_id', '=', $id)
+            ->pluck('abilities')
+            ->toArray();
+    }
 
     public function applyFilter(array $items)
     {

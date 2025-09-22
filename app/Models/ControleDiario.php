@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class ControleDiario extends Model
 {
-    //
-    protected $table = "controle_diario";
+    use HasFactory;
+
+    protected $table = "controle_diarios";
     protected $fillable = [
         "funcionario_motorista_id",
         "funcionario_gestor_id",

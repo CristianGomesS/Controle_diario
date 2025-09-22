@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Helpers\SlugStoreHelper;
 use App\Repositories\Contracts\BaseInterface;
 use App\Repositories\Core\ProfileRepository;
 
@@ -26,6 +27,7 @@ class ProfileService implements BaseInterface
 
     public function store(array $data): void
     {
+        $data = SlugStoreHelper::FormateSlug($data);
         $this->repository->store($data);
     }
 

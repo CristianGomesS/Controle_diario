@@ -19,13 +19,13 @@ class FuncionarioSeeder extends Seeder
                 "name"=> "Administrador",
                 "email"=> "teste@teste.com",
                 "cpf"=> "12345678901",
-                "id_profile"=> 1,
+                "profile_id"=> 1,
              ],
              [   
                 "name"=> "usuario gestor",
                 "email"=> "teste2@teste.com",
                 "cpf"=> "12345678905",
-                "id_profile"=> 2,
+                "profile_id"=> 2,
              ],
          
         ];

@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('controle_diario', function (Blueprint $table) {
+        Schema::create('controle_diarios', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('funcionario_motorista_id')->constrained('funcionario');
-            $table->foreignId('funcionario_gestor_id')->constrained('funcionario');
-            $table->foreignId('funcao_id')->constrained('funcao');
+            $table->foreignId('funcionario_motorista_id')->constrained('funcionarios');
+            $table->foreignId('funcionario_gestor_id')->constrained('funcionarios');
+            $table->foreignId('funcao_id')->constrained('funcoes');
             $table->foreignId('status_id')->constrained('status');
             $table->date('retorno_ferias');
             $table->foreignId('status_viagem_id')->constrained('status');
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('controle_diario');
+        Schema::dropIfExists('controle_diarios');
     }
 };

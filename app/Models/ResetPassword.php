@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Status extends Model
+class ResetPassword extends Model
 {
+    
     use HasFactory;
-    //
-    protected $table = "status";
+
+    protected $table = 'reset_passwords';
+
     protected $fillable = [
-        "name",
-        "slug",
-        "descricao",
-        "tipo",
+        'email',
+        'token',
     ];
 }

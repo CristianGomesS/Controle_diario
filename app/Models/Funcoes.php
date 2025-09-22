@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Funcao extends Model
+class Funcoes extends Model
 {
     //
-    protected $table = "funcao";
+    use HasFactory;
+    protected $table = "funcoes";
     protected $fillable = [
         "name","slug","descricao","created_at","updated_at",
     ];
